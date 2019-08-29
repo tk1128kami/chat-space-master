@@ -1,0 +1,24 @@
+.wrapper
+  = render partial:"/layouts/shared/side_bar"
+  .chat-main
+    .main-head
+      .main-head__left-box
+        %h2.main-head__left-box__current-group
+          =@group.name
+        %ul.main-head__left-box__member-list
+          Member:
+          - @group.users. each do |user|
+            %li.main-header__left-box__member-list__member
+              =user.name
+      = link_to 'Edit', edit_group_path(@group), class: 'main-head__edit-btn'
+    .messages
+      = render @messages
+    .form
+      = form_for [@group, @message] do |f|
+        .box3
+        .input-box
+          = f.text_field :content, id: 'message_content', class: 'input-box__text', name: "message[content]", placeholder: "type a message"
+          = f.label :image, class: 'input-box__image', for: "message_image" do
+            = fa_icon "image"
+            = f.file_field :image, id: 'message_image', class: 'input-box__image__file', name: "message[image]"
+          = f.submit 'Send', class: 'submit-btn'
