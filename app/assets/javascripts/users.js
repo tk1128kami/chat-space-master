@@ -64,7 +64,7 @@ $(document).on('turbolinks:load',function(){
       var name = $(this).attr(".chat-group-user__name")
       var id = $(this).attr("data-user-id")
       $(this).parent().remove()
-      deli_menber(name)
+      deli_member(name)
     });
   });
 });
