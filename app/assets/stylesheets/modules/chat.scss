@@ -12,14 +12,14 @@
         margin-top: 35px;
       }
       &__members {
-        @include flexbox;
+        // @include flexbox;
         color: $light_gray;
         font-size: 12px;
         margin-top: 15px;
-        .member {
-          display: inline-block;
-          padding-right: 5px;
-        }
+        // .member {
+        //   display: inline-block;
+        //   padding-right: 5px;
+        // }
       }
     }
     .right-header {
