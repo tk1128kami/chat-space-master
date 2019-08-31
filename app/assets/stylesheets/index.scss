@@ -104,7 +104,6 @@ html, body {
     margin: 35px 0px 0px;
     height: 64px;
     box-sizing: border-box;
-    float: left;
     &__current-group {
     font-size: 20px;
     color: #333;
@@ -112,6 +111,7 @@ html, body {
     font-weight: normal;
     }
     &__member-list {
+    float: left;
     width: 121.55px;
     height: 18px;
     display: flex;
