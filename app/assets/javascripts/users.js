@@ -1,5 +1,4 @@
 $(document).on('turbolinks:load',function(){
-  $(function() {
     var search_list=$('#user-search-result')
     
     function appendUser(user){
@@ -10,7 +9,7 @@ $(document).on('turbolinks:load',function(){
         </div>`
         search_list.append(html)
     };
-    
+
     function appendErrMsgToHTML(msg){
       var html= `<p class="chat-group-user__name">${msg}</p>`
       search_list.append(html)
@@ -68,5 +67,4 @@ $(document).on('turbolinks:load',function(){
       $(this).parent().remove()
       deli_member(name)
     });
-  });
 });
